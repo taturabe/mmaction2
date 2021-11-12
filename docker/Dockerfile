@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y git ninja-build libglib2.0-0 libsm6 lib
     && rm -rf /var/lib/apt/lists/*
 
 # Install mmcv-full
-RUN pip install mmcv-full==latest+torch1.6.0+cu101 -f https://download.openmmlab.com/mmcv/dist/index.html
+RUN pip install mmcv-full==1.3.8 -f https://download.openmmlab.com/mmcv/dist/cu101/torch1.6.0/index.html
 
 # Install MMAction2
 RUN conda clean --all
@@ -23,3 +23,15 @@ RUN mkdir -p /mmaction2/data
 ENV FORCE_CUDA="1"
 RUN pip install cython --no-cache-dir
 RUN pip install --no-cache-dir -e .
+
+
+#RUN apt-get update 
+#RUN apt-get install -y git
+#RUN pip install --upgrade pip
+RUN pip install ipykernel && \
+    python -m ipykernel install --sys-prefix && \
+    pip install --quiet --no-cache-dir \
+    'boto3>1.0<2.0' \
+    'sagemaker>2.0<3.0' \
+    'mmdet==2.18.0' \
+    'moviepy==1.0.3'

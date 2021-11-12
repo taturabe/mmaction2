@@ -1,0 +1,12 @@
+{
+  "DefaultUserSettings": {
+    "KernelGatewayAppSettings": {
+      "CustomImages": [
+          {
+                   "ImageName": "mmaction2",
+                   "AppImageConfigName": "mmaction2"
+                }
+            ]
+        }
+    }
+}

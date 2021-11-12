@@ -1,0 +1,13 @@
+{
+    "DomainId": "d-7yxnizoyyqcr",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "mmaction2",
+                    "AppImageConfigName": "mmaction2"
+                }
+            ]
+        }
+    }
+}
